@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Design</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="form-group">
+            <label for="productName" class="form-label my-2">Product Name:</label>
+            <input type="text" class="form-control" id="productName">
+            <label for="productPrice" class="form-label my-2">Product Price:</label>
+            <input type="number" class="form-control" id="productPrice">
+            <label for="productCategory" class="form-label my-2">Product Category:</label>
+            <input type="text" class="form-control" id="productCategory">
+            <label for="productDes" class="form-label my-2">Product Des:</label>
+            <textarea class="form-control" id="productDes" rows="5"></textarea>
+            <div class="d-flex justify-content-between align-items-center my-5">
+                <button id="add" class="add btn btn-primary">Add Product</button>
+                <button id="update" class="add btn btn-primary" style="display: none;">Update Product</button>
+                <input id="search" class="form-control w-50" type="search" placeholder="Search By Name">
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Index</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+
+
+    <!-- Modal -->
+    <div class="layer fixed-top h-100 w-100 bg-black bg-opacity-50" style="display: none;" id="exampleModal">
+        <div class="modal-dialog w-50 bg-white p-3 rounded-2 h-25 mt-5">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-4 mb-3" id="exampleModalLabel">Warning</h1>
+                    <button type="button" class="btn-close" onclick="closeButton()"></button>
+                </div>
+                <div class="modal-body">
+                    You have to fill all the input fields
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
